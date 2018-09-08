@@ -19,14 +19,12 @@
     var_dump((int)0 === (int)'hello, world'); // Почему true?
 	//Вот тут-то я и не знаю почему так
 ?>
-
 <script type="text/javascript">
 // Для проверки можно удалить этот JS скрипт
 var BODY = $('.body');
 $('body').empty();
 console.log(BODY);
 </script>
-
 <?php
 $HEAD;
 $nav;
@@ -50,7 +48,6 @@ var BODY = $('.body');
 $('body').empty();
 console.log(BODY);
 </script>
-
 <?php 
 $x = 10;
 $y = 250;
@@ -66,10 +63,5 @@ $x -= $y;
 echo '</br>';
 echo $x;
 ?>
-
-
-
-
-
 </body>
 </html>
