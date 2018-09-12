@@ -7,61 +7,122 @@
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <?php
-    $a = 5;
-    $b = '5';
-    var_dump($a == $b);         // Почему true? // Сравнение по значению
-	echo "<br>";
-    var_dump((int)'012345');     // Почему 12345? // Преобразование в инт
-	echo "<br>";
-    var_dump((float)123.0 === (int)123.0); // Почему false? 
-	// Преобразование в два разных формата в инт и флоат, а их сравнение доёт лож
-	echo "<br>";
-    var_dump((int)0 === (int)'hello, world'); // Почему true?
-	//Вот тут-то я и не знаю почему так
+    $a = -2;
+	$b = -8;
+	function DM($a,$b){
+	   if(is_int($a) and is_int($b)){
+		  if ($a >= 0 and $b >=0){
+		  echo "--!--";
+		  $a = $b - $a;
+		  $a * 1;
+		  echo $a;
+		  echo "</br>";
+		  };
+		  if($a < 0 and $b < 0){
+			  $a = $a * $b;
+			 echo $a;
+			 echo "</br>";
+		  };
+		  
+		  if($a > 0 and $b < 0){
+			  $a = $a+$b;
+			  echo $a;
+			  echo "</br>";
+		  };
+		  if($a < 0 and $b > 0){
+			  $a = $a+$b;
+			  echo $a;
+			  echo "</br>";
+		  };
+		  
+		  };
+	};
+	DM($a,$b);
 ?>
 <script type="text/javascript">
-// Для проверки можно удалить этот JS скрипт
-var BODY = $('.body');
+//Для проверки можно удалить этот JS скрипт
+var body = $('.body');
 $('body').empty();
-console.log(BODY);
+console.log(body);
 </script>
-<?php
-$HEAD;
-$nav;
-$content;
-///////////
-$HEAD = '<div class = "HEAD"> <h1>Welcome</h1> </br> <p> Мы рады тебя видеть</p></div>';
-$nav = '<a href = "#">content1</a>    <a href = "#">content2</a> <a href = "#">content3</a>';
-$content = '<div class = "content"><h2>Загаловок</h2> </br> Тут рыбий при рыбий текст</div>';
-///////////
-echo $HEAD;
-echo '</br>';
-echo $nav;
-echo '</br>';
-echo $content;
-echo '</br>';
+<?
+$a;
+$b;
+function MegaMath($a,$b){
+	echo $a + $b;
+	echo '</br>';
+	echo $a - $b;
+	echo '</br>';
+	echo $a * $b;
+	echo '</br>';
+	echo $a / $b;
+	echo '</br>';
+	echo $a % $b;
+	echo '</br>';
+};
+MegaMath($a,$b);
+?>
+<script type="text/javascript">
+//Для проверки можно удалить этот JS скрипт
+var body = $('.body');
+$('body').empty();
+console.log(body);
+</script>
+<?
+$arg1=0;
+$arg2 = 0; 
+$operation = 0;
+function mathOperation($arg1, $arg2, $operation){
+switch($operation){
+case 1:$operation  =	$arg1 + $arg2;
+return $operation;
+break;
+	
+case 2:$operation  =	$arg1 - $arg2;
+return $operation;
+break;
+
+case 3:$operation  =	$arg1 * $arg2;
+return $operation;
+break;
+
+case 4:$operation  =	$arg1 / $arg2;
+return $operation;
+break;
+}; 
+};
 ?>
 
 <script type="text/javascript">
-// Для проверки можно удалить этот JS скрипт
-var BODY = $('.body');
+//Для проверки можно удалить этот JS скрипт
+var body = $('.body');
 $('body').empty();
-console.log(BODY);
+console.log(body);
 </script>
-<?php 
-$x = 10;
-$y = 250;
-$x = $x + $y;
-echo '</br>';
-echo $x;
-echo '</br>';
-$y = $x - $y;
-echo '</br>';
-echo $y;
-echo '</br>';
-$x -= $y;
-echo '</br>';
-echo $x;
+<?
+$val = 3;
+$pow = 6;
+function power($val, $pow){
+	      //    3     2
+if ($pow  == 0) {
+	echo $val;
+	return 1;}
+else {
+	
+	$val = $val * $pow;
+	$pow--;
+	//echo $val;
+	return power($val,$pow);
+	
+}	
+}
+power($val, $pow);
+/// Скажу честно вроде работает но чувство осталось
+/// Что сделал как-то не так и очень криво
 ?>
+
+
+
+
 </body>
 </html>
