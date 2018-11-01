@@ -15,11 +15,6 @@ define($sessionName,$MyBay); // Доём обьекту имя от куки
 
 
 
-//namespace Mr\god;
-/// В репризиотории сдлеать в нём механику  как и у компанента?
-// Апликйдж и Сторадже сделать у себя
-//Магазин от и до
-// 2ю26
 require_once 'SessionBay.php'; // Таблица контроля магазина
 $StatusNumero = $_COOKIE['Session'];
 
